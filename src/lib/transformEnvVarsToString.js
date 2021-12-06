@@ -11,7 +11,7 @@ const os = require("os");
  */
 function transformEnvVarsToString(envVars) {
   const output = _.map(envVars, (value, key) => {
-    return `${key}=${value}`;
+    return `${key}="${value}"`;
   });
 
   return output.join(os.EOL);
